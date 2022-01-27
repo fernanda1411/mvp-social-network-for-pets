@@ -1,6 +1,12 @@
 # Social Network for Pets
 
 
+## Run Frontend
+
+```
+npm run build && npm run start
+```
+
 ## Stack
 
 MERN
