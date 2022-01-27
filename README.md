@@ -1,11 +1,26 @@
 # Social Network for Pets
 
 
-## Run Frontend
+## Run app
 
 ```
-npm run build && npm run start
+npm run start
 ```
+
+
+## Heroku
+
+- Login
+```
+heroku login
+```
+
+- add remote (done once)
+```
+heroku git:remote -a mvp-social-network-for-pets
+```
+
+
 
 ## Stack
 
