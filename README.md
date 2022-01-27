@@ -20,6 +20,16 @@ heroku login
 heroku git:remote -a mvp-social-network-for-pets
 ```
 
+## Push changes
+
+- git only
+```
+git push origin main
+```
+- git and heroku
+```
+git push origin main && git push heroku main
+```
 
 
 ## Stack
