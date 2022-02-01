@@ -9,6 +9,16 @@ const App = () => {
 
   useEffect(async () => {
     setIsLoading(true);
+
+    const breeds = await axios.get('https://api.thedogapi.com/v1/breeds', {
+      headers: {
+        'x-api-key': process.env.REACT_APP_THEDOGAPI_KEY,
+      }
+    });
+
+    console.log('breeds', breeds)
+
+
     const token = await axios.post('https://api.petfinder.com/v2/oauth2/token', {
       grant_type: "client_credentials",
       client_id: process.env.REACT_APP_PETFINDER_API_KEY,
