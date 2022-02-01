@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend:dev": "webpack serve --open --config webpack.dev.js",
+    "frontend:dev": "webpack --config webpack.dev.js -w --mode=development",
     "frontend:build": "webpack --config webpack.prod.js",
     "server:dev": "nodemon server/index.js",
     "start": "npm run frontend:build && node server/index.js"
@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "css-loader": "^6.5.1",
     "dotenv": "^14.3.2",
+    "dotenv-webpack": "^7.1.0",
     "express": "^4.17.2",
     "file-loader": "^6.2.0",
     "mongoose": "^6.1.8",

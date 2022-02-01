@@ -5,12 +5,22 @@ const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
+
+const usersRoutes = require('./routes/users');
+const postsRoutes = require('./routes/posts');
+
+// Middleware
+app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
-app.get('/', function(req, res) {
+// Routes
+
+app.use('/api/users', usersRoutes);
+app.use('/api/posts', postsRoutes);
+
+app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 

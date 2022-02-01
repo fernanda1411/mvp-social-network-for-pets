@@ -1,6 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
+const CURRENT_PET_MOCK = {
+  name: 'Bro',
+  dob: 1643694761,
+
+}
 
 const Profile = () => {
+  // State
+  const [currentPet, setCurrentPet] = useState({});
+
+  useEffect(() => {
+
+
+  }, []);
+
   return (
     <>
       <img src="https://placedog.net/500" />
