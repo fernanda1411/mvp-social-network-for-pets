@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -33,6 +35,15 @@ html {
   img {
     width: 100%;
   }
+  &__image {
+    height: 200px;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+  }
+  &__details {
+    padding: 20px 10px;
+  }
 }
 
 .animal-details {
@@ -53,6 +64,8 @@ header {
   align-items: center;
   h1 {
     margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 6vw;
   }
   label {
     margin-right: 10px;

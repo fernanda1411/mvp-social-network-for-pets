@@ -6,8 +6,9 @@ const AnimalCard = ({breed, onSelect}) => {
   }
   return (
     <li className="animal-card" onClick={handleClick}>
-      <img src={breed.image.url} />
-      <div>
+      <div className='animal-card__image' style={{backgroundImage: `url(${breed.image.url})`}}>
+      </div>
+      <div className="animal-card__details">
         <p>{breed.name}</p>
       </div>
     </li>
