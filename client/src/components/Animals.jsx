@@ -21,7 +21,7 @@ const Animals = ({petFinderToken}) => {
 
   return (
     <>
-        <p>Animals</p>
+      <p>Animals</p>
     </>
   )
 
