@@ -1,0 +1,40 @@
+html {
+  background-image: url('https://i.etsystatic.com/8409140/r/il/9b376f/911123224/il_1140xN.911123224_ln5e.jpg');
+  background-blend-mode: lighten;
+  background-size: 60px;
+}
+
+.app {
+  padding: 20px;
+  background: rgba(255,255,255,.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animal-cards-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.animal-card {
+  width: 20vw;
+  background-color: grey;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+  }
+}
+
+.animal-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-width: 80vw;
+  }
+}
