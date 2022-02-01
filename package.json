@@ -6,6 +6,7 @@
   "engines": {
     "node": "16.13.0"
   },
+  "proxy": "http://api.petfinder.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend:dev": "webpack --config webpack.dev.js -w --mode=development",
