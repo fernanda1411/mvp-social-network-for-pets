@@ -80,23 +80,34 @@ const App = () => {
   }
 
   return (
-    <div className="app">
-      <h1>Dogs Finder</h1>
-
-      <div>
-        Search <input onChange={handleSearch}  value={query} type="text"></input>
+    <>
+      <header>
+        <h1>Dogs Finder</h1>
+        <div>
+          <label>Search</label>
+          <input
+            onChange={handleSearch}
+            value={query}
+            type="text"
+            placeholder='Search by breed, temperament, origin, etc'
+            />
+        </div>
+      </header>
+      <div className="app">
+        {selected > 0 ?
+          <AnimalDetails breed={getSelected()} unselect={unselect}/>
+          :
+          <ul className="animal-cards-list">
+            {filtered.map(breed => (
+              <AnimalCard  key={breed.id} breed={breed} onSelect={handleSelect}/>
+            ))}
+          </ul>
+        }
       </div>
-
-      {selected > 0 ?
-        <AnimalDetails breed={getSelected()} unselect={unselect}/>
-        :
-        <ul className="animal-cards-list">
-          {filtered.map(breed => (
-            <AnimalCard  key={breed.id} breed={breed} onSelect={handleSelect}/>
-          ))}
-        </ul>
-      }
-    </div>
+      <footer>
+        <p>source: https://thedogapi.com/</p>
+      </footer>
+    </>
   )
 
 };
