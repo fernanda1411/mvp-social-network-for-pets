@@ -11,7 +11,7 @@ const Animals = ({petFinderToken}) => {
     const animals = await axios.get('https://api.petfinder.com/v2/animals', {
       withCredentials: false,
       headers: {
-        'Authorization': `token ${petFinderToken}`,
+        'Authorization': `Bearer ${petFinderToken}`,
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     });
